@@ -92,7 +92,7 @@ nav .brand-logo{display:block!important;width:82px!important;height:64px!importa
 </style>
 </head>
 <body><div class="scroll-progress" aria-hidden="true"></div>
-<nav><a class="brand" href="/" aria-label="SWARIVO home"><img class="brand-logo" src="/swarivo-logo.svg?v=logo-final" alt="SWARIVO"></a><div class="links"><a href="/">Home</a><a href="/products.html">Products</a><a href="/services.html">Web &amp; Software</a><a href="/#about">About</a><a class="pill" href="/#contact">Contact</a></div></nav>
+<nav><a class="brand" href="/" aria-label="SWARIVO home"><img class="brand-logo" src="/swarivo-logo.svg?v=logo-final" alt="SWARIVO"></a><div class="links"><a href="/">Home</a><a href="/products.html">Products</a><a href="/services.html">Web &amp; Software</a><a href="/#about">About</a><a class="pill" href="/#contact">Contact</a></div><button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button></nav>
 
 <main>
 <section class="hero">
@@ -157,5 +157,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
 const panel=document.querySelector(".brand-panel"),visual=document.querySelector(".visual");
 if(panel&&visual&&matchMedia("(pointer:fine)").matches){visual.addEventListener("pointermove",e=>{const r=visual.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;panel.style.animation="none";panel.style.transform="translate(-50%,-50%) rotateX("+(-y*5)+"deg) rotateY("+(x*7)+"deg)"});visual.addEventListener("pointerleave",()=>{panel.style.animation="panelFloat 7s ease-in-out infinite";panel.style.transform=""})}
-</script></body>
+</script>
+<script src="/mobile-nav.js?v=2" defer></script>
+</body>
 </html>
