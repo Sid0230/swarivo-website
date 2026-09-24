@@ -30,3 +30,51 @@ html{scroll-behavior:smooth;overflow-x:hidden}body{overflow-x:hidden}img,svg{max
 /* MOBILE HEADER — keep primary navigation visible on every page */
 @media(max-width:520px){nav{display:flex!important;align-items:center!important;justify-content:space-between!important;flex-wrap:nowrap!important;overflow:visible!important}.links{display:flex!important;align-items:center!important;justify-content:flex-end!important;flex-wrap:nowrap!important;overflow:visible!important;visibility:visible!important;opacity:1!important}.links a{display:inline-flex!important;visibility:visible!important;opacity:1!important;white-space:nowrap!important}.links a:not(.pill){display:inline-flex!important}.links{gap:4px!important}.links a{font-size:9px!important;padding:6px 5px!important}.links .pill{font-size:9px!important;padding:7px 7px!important}.brand{flex:0 0 auto!important}.brand-logo{flex-shrink:0!important}}
 @media(max-width:400px){nav{padding-left:8px!important;padding-right:8px!important}.links{gap:2px!important}.links a{font-size:8px!important;padding:5px 3px!important}.links .pill{font-size:8px!important;padding:6px 5px!important}.brand{max-width:62px!important}.brand-logo{max-width:62px!important}}
+
+
+/* FINAL CROSS-DEVICE QA — layout/content preserved */
+html{min-width:320px;scroll-padding-top:84px}
+body{min-width:320px;overflow-x:hidden}
+nav{min-width:0}
+nav .brand,nav .brand-logo{flex-shrink:0}
+nav .links{min-width:0}
+nav .links a{min-height:40px;display:inline-flex;align-items:center;justify-content:center}
+nav a:focus-visible,.page-back a:focus-visible,.cta:focus-visible{outline:3px solid rgba(118,185,87,.75);outline-offset:3px;border-radius:6px}
+img,svg,video{max-width:100%;height:auto}
+input,textarea,select,button{font:inherit;max-width:100%}
+
+/* Tablet + phone: keep every primary navigation item available. */
+@media(max-width:760px){
+  body{padding-top:112px!important}
+  nav{min-height:104px!important;height:auto!important;padding:8px 14px 7px!important;display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:4px 10px!important}
+  nav .brand{width:120px!important;height:48px!important;flex:0 0 120px!important;overflow:visible!important}
+  nav .brand-logo{width:120px!important;height:48px!important;max-width:120px!important;max-height:48px!important;object-fit:contain!important}
+  nav .links{order:3!important;width:100%!important;max-width:none!important;flex:1 1 100%!important;display:flex!important;justify-content:flex-start!important;align-items:center!important;gap:6px!important;overflow-x:auto!important;overflow-y:hidden!important;white-space:nowrap!important;padding:2px 1px 4px!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch!important}
+  nav .links::-webkit-scrollbar{display:none}
+  nav .links a{display:inline-flex!important;flex:0 0 auto!important;font-size:11px!important;padding:7px 8px!important;min-height:38px!important}
+  nav .links .pill{padding:8px 11px!important}
+}
+@media(max-width:380px){
+  body{padding-top:108px!important}
+  nav{min-height:100px!important;padding-left:9px!important;padding-right:9px!important}
+  nav .brand{width:105px!important;height:44px!important;flex-basis:105px!important}
+  nav .brand-logo{width:105px!important;height:44px!important;max-width:105px!important;max-height:44px!important}
+  nav .links{gap:3px!important}
+  nav .links a{font-size:10px!important;padding:6px 6px!important}
+  nav .links .pill{padding:7px 8px!important}
+}
+@media(max-width:340px){
+  nav .brand{width:96px!important;flex-basis:96px!important}
+  nav .brand-logo{width:96px!important}
+  nav .links a{font-size:9px!important;padding:5px 5px!important}
+}
+@media(orientation:landscape) and (max-width:760px){
+  body{padding-top:94px!important}
+  nav{min-height:88px!important}
+  nav .brand{width:105px!important;height:40px!important;flex-basis:105px!important}
+  nav .brand-logo{width:105px!important;height:40px!important}
+  nav .links a{min-height:34px!important;padding:5px 7px!important}
+}
+@media(hover:none){.business-card:hover,.service:hover,.value:hover,.cat:hover{transform:none;box-shadow:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}body:before,body:after{animation:none!important}}
+@media print{nav,.scroll-progress,body:before,body:after{display:none!important}body{padding:0!important;background:#fff!important;color:#000!important}.page-hero,.section,.statement,.service-stack{padding-top:25px!important;padding-bottom:25px!important}a{color:#000!important;text-decoration:underline!important}}
