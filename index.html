@@ -53,6 +53,42 @@ nav{transition:background .35s,box-shadow .35s,transform .35s}nav.scrolled{backg
 nav .brand{display:flex!important;align-items:center!important;justify-content:flex-start!important;width:82px!important;height:64px!important;flex:0 0 82px!important;gap:0!important;overflow:visible!important;padding:0!important}
 nav .brand-logo{display:block!important;width:82px!important;height:64px!important;max-width:82px!important;max-height:64px!important;object-fit:contain!important;object-position:center!important;visibility:visible!important;opacity:1!important}
 @media(max-width:760px){nav .brand{width:72px!important;height:56px!important;flex-basis:72px!important}nav .brand-logo{width:72px!important;height:56px!important;max-width:72px!important;max-height:56px!important}}
+
+/* MOBILE PREMIUM HEADER — homepage only; desktop unchanged */
+@media (max-width:760px){
+  body{padding-top:118px!important}
+  nav{
+    top:8px!important;left:10px!important;right:10px!important;width:auto!important;
+    min-height:104px!important;height:auto!important;padding:8px 10px 9px!important;
+    display:grid!important;grid-template-columns:1fr auto!important;grid-template-rows:48px 38px!important;
+    align-items:center!important;gap:5px 8px!important;background:rgba(255,255,255,.90)!important;
+    border:1px solid rgba(16,41,30,.10)!important;border-radius:18px!important;
+    box-shadow:0 10px 35px rgba(16,41,30,.12)!important;
+    backdrop-filter:blur(22px)!important;-webkit-backdrop-filter:blur(22px)!important;
+  }
+  nav .brand{grid-column:1!important;grid-row:1!important;width:118px!important;height:46px!important;flex:none!important;overflow:visible!important;padding:0!important}
+  nav .brand-logo{width:118px!important;height:46px!important;max-width:118px!important;max-height:46px!important;object-fit:contain!important;object-position:left center!important}
+  nav .links{grid-column:1 / -1!important;grid-row:2!important;width:100%!important;min-width:0!important;margin:0!important;padding:0 1px!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:6px!important;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch!important}
+  nav .links::-webkit-scrollbar{display:none!important}
+  nav .links a{flex:0 0 auto!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:34px!important;height:34px!important;padding:6px 11px!important;border:1px solid transparent!important;border-radius:999px!important;background:rgba(16,41,30,.045)!important;color:#26362e!important;font-size:10.5px!important;font-weight:700!important;white-space:nowrap!important}
+  nav .links a:first-child{background:rgba(118,185,87,.16)!important;color:#17452f!important;border-color:rgba(118,185,87,.28)!important}
+  nav .links .pill{background:#10291e!important;color:#fff!important;border-color:#10291e!important;padding:6px 13px!important;box-shadow:0 5px 14px rgba(16,41,30,.16)!important}
+}
+@media (max-width:420px){
+  body{padding-top:114px!important}
+  nav{top:6px!important;left:7px!important;right:7px!important;border-radius:16px!important;grid-template-rows:45px 36px!important;padding:7px 8px 8px!important}
+  nav .brand,nav .brand-logo{width:108px!important;height:43px!important;max-width:108px!important;max-height:43px!important}
+  nav .links{gap:5px!important}
+  nav .links a{min-height:32px!important;height:32px!important;padding:5px 9px!important;font-size:10px!important}
+  nav .links .pill{padding:5px 11px!important}
+}
+@media (orientation:landscape) and (max-width:760px){
+  body{padding-top:82px!important}
+  nav{min-height:72px!important;height:72px!important;grid-template-columns:auto 1fr;grid-template-rows:1fr!important;padding:6px 10px!important}
+  nav .brand{grid-column:1!important;grid-row:1!important;width:105px!important;height:46px!important}
+  nav .brand-logo{width:105px!important;height:46px!important}
+  nav .links{grid-column:2!important;grid-row:1!important;justify-content:flex-end!important;height:100%!important}
+}
 </style>
 </head>
 <body><div class="scroll-progress" aria-hidden="true"></div>
