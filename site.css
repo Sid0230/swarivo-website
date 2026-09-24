@@ -4,3 +4,9 @@ nav .brand-logo{display:block!important;width:178px!important;height:42px!import
 nav .brand{width:178px!important;height:42px!important;display:flex!important;align-items:center!important;flex:0 0 178px!important}
 @media(max-width:760px){nav .brand,nav .brand-logo{width:150px!important;height:36px!important;flex-basis:150px!important}nav .links{max-width:calc(100vw - 170px)!important}}
 @media(max-width:520px){nav .brand,nav .brand-logo{width:132px!important;height:32px!important;flex-basis:132px!important}nav .links{max-width:calc(100vw - 145px)!important;gap:12px!important}}
+
+/* Supplied SWARIVO logo - full mark and wordmark */
+nav .brand{display:flex!important;align-items:center!important;width:76px!important;height:60px!important;flex:0 0 76px!important;overflow:hidden!important}
+nav .brand-logo{display:block!important;width:76px!important;height:60px!important;object-fit:contain!important;object-position:center!important}
+@media(max-width:760px){nav .brand{width:68px!important;height:54px!important;flex-basis:68px!important}nav .brand-logo{width:68px!important;height:54px!important}}
+@media(max-width:520px){nav .brand{width:60px!important;height:50px!important;flex-basis:60px!important}nav .brand-logo{width:60px!important;height:50px!important}}
