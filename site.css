@@ -10,3 +10,9 @@ nav .brand{display:flex!important;align-items:center!important;width:76px!import
 nav .brand-logo{display:block!important;width:76px!important;height:60px!important;object-fit:contain!important;object-position:center!important}
 @media(max-width:760px){nav .brand{width:68px!important;height:54px!important;flex-basis:68px!important}nav .brand-logo{width:68px!important;height:54px!important}}
 @media(max-width:520px){nav .brand{width:60px!important;height:50px!important;flex-basis:60px!important}nav .brand-logo{width:60px!important;height:50px!important}}
+
+/* Exact supplied SWARIVO header logo */
+nav .brand{display:flex!important;align-items:center!important;width:88px!important;height:60px!important;flex:0 0 88px!important;overflow:hidden!important}
+nav .brand-logo{display:block!important;width:88px!important;height:60px!important;object-fit:contain!important}
+@media(max-width:760px){nav .brand{width:78px!important;height:54px!important;flex-basis:78px!important}nav .brand-logo{width:78px!important;height:54px!important}}
+@media(max-width:520px){nav .brand{width:68px!important;height:50px!important;flex-basis:68px!important}nav .brand-logo{width:68px!important;height:50px!important}}
