@@ -16,3 +16,10 @@ nav .brand{display:flex!important;align-items:center!important;width:88px!import
 nav .brand-logo{display:block!important;width:88px!important;height:60px!important;object-fit:contain!important}
 @media(max-width:760px){nav .brand{width:78px!important;height:54px!important;flex-basis:78px!important}nav .brand-logo{width:78px!important;height:54px!important}}
 @media(max-width:520px){nav .brand{width:68px!important;height:50px!important;flex-basis:68px!important}nav .brand-logo{width:68px!important;height:50px!important}}
+
+/* SWARIVO RESPONSIVE POLISH — preserves existing content */
+html{scroll-behavior:smooth;overflow-x:hidden}body{overflow-x:hidden}img,svg{max-width:100%;height:auto}a,button{touch-action:manipulation}.links a{transition:color .2s,background .2s,transform .2s}.links a:hover{transform:translateY(-1px)}
+@media(min-width:1400px){nav{padding-left:clamp(28px,5vw,90px);padding-right:clamp(28px,5vw,90px)}}
+@media(max-width:800px){nav{gap:14px}nav .links{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch}nav .links::-webkit-scrollbar{display:none}section,.page-hero,.category-shell,.brand-statement,.service-stack,.statement{max-width:100%;box-sizing:border-box}}
+@media(max-width:560px){nav{padding:10px 16px;min-height:60px;box-sizing:border-box}nav .brand,nav .brand-logo{width:68px!important;height:50px!important;flex-basis:68px!important}nav .links{gap:11px!important;font-size:12px}nav .pill{padding:9px 12px!important}footer{gap:10px}footer span{display:block}.page-hero{padding-left:20px!important;padding-right:20px!important}}
+@media(max-width:380px){nav .brand,nav .brand-logo{width:60px!important;height:46px!important;flex-basis:60px!important}nav .links{gap:9px!important;font-size:11px}}
