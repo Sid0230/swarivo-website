@@ -1,36 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
 <title id="title">SWARIVO Product Mark</title>
-<desc id="desc">An original animated S-shaped green mark with a rising leaf, created for the SWARIVO product experience.</desc>
 <defs>
-  <linearGradient id="s" x1="42" y1="35" x2="185" y2="210" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="#0b5539"/>
-    <stop offset=".55" stop-color="#0e7a48"/>
-    <stop offset="1" stop-color="#083c2b"/>
-  </linearGradient>
-  <linearGradient id="leaf" x1="118" y1="32" x2="190" y2="105" gradientUnits="userSpaceOnUse">
-    <stop offset="0" stop-color="#b8e878"/>
-    <stop offset=".5" stop-color="#6fc34d"/>
-    <stop offset="1" stop-color="#2f913d"/>
-  </linearGradient>
-  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
-    <feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#063c29" flood-opacity=".18"/>
-  </filter>
+ <linearGradient id="deep" x1="72" y1="48" x2="173" y2="199" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#0A6842"/><stop offset=".52" stop-color="#087B48"/><stop offset="1" stop-color="#06412D"/>
+ </linearGradient>
+ <linearGradient id="fresh" x1="105" y1="35" x2="190" y2="111" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#B5EA72"/><stop offset=".45" stop-color="#72D13F"/><stop offset="1" stop-color="#36A33C"/>
+ </linearGradient>
+ <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#063C29" flood-opacity=".18"/></filter>
 </defs>
-<g filter="url(#shadow)">
-  <path fill="url(#s)" d="M145 31c-35 3-70 21-83 48-11 23 1 43 31 56l50 22c15 7 20 14 16 23-4 10-18 18-38 22 35 1 65-16 74-41 9-27-7-48-39-62l-48-21c-15-7-20-14-16-23 5-10 20-19 53-24z"/>
-  <path fill="url(#leaf)" d="M126 78c9-28 32-49 67-58 1 29-8 53-28 70-17 14-38 21-62 21 5-13 12-24 23-33z"/>
-  <path fill="none" stroke="#e9f8d7" stroke-width="5" stroke-linecap="round" d="M141 77c15-18 30-31 47-42"/>
-</g>
-<g fill="none" stroke="#79c75b" stroke-linecap="round" opacity=".8">
-  <path d="M43 173c16 21 37 34 62 40" stroke-width="3"/>
+<g filter="url(#soft)">
+ <!-- refined S ribbon -->
+ <path fill="url(#deep)" d="M151 48c-17 1-35 7-47 17-10 8-15 17-15 25 0 11 8 18 25 25l42 18c24 10 35 24 33 41-2 16-13 29-31 38-13 7-28 10-45 9 26-7 40-17 43-29 3-10-4-17-20-24l-42-18c-27-12-39-28-35-47 4-20 20-37 45-48 15-6 31-9 47-7z"/>
+ <!-- lower sweep that makes the S read clearly -->
+ <path fill="url(#deep)" d="M76 139c12 18 30 30 53 38 17 6 28 13 32 22-6 14-17 23-33 29-22-7-40-17-54-31-13-13-21-27-24-43 8-3 17-7 26-15z"/>
+ <!-- elegant leaf -->
+ <path fill="url(#fresh)" d="M116 83c8-28 28-48 61-59 12-4 23-6 34-6-2 28-12 51-30 67-16 14-36 22-60 24 1-9-1-17-5-26z"/>
+ <!-- leaf vein -->
+ <path d="M132 93c16-20 31-35 49-49" fill="none" stroke="#E9F8D4" stroke-width="4.5" stroke-linecap="round" opacity=".9"/>
+ <!-- subtle inner highlight -->
+ <path d="M91 81c4-10 13-19 27-27" fill="none" stroke="#9AD875" stroke-width="4" stroke-linecap="round" opacity=".45"/>
 </g>
 <style>
-g[filter] { transform-origin: 120px 120px; animation: swarivoMarkFloat 5s ease-in-out infinite; }
-path[fill="url(#leaf)"] { transform-origin: 158px 61px; animation: swarivoLeaf 4s ease-in-out infinite; }
-@keyframes swarivoMarkFloat { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-5px) rotate(-1deg); } }
-@keyframes swarivoLeaf { 0%,100% { transform: rotate(0deg) scale(1); } 50% { transform: rotate(3deg) scale(1.025); } }
-@media (prefers-reduced-motion: reduce) {
-  g[filter], path[fill="url(#leaf)"] { animation: none; }
-}
+g{transform-origin:120px 120px;animation:markFloat 5s cubic-bezier(.4,0,.2,1) infinite}
+@keyframes markFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-4px) scale(1.012)}}
+@media(prefers-reduced-motion:reduce){g{animation:none}}
 </style>
 </svg>
