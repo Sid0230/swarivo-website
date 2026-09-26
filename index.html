@@ -269,6 +269,6 @@ document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
 const panel=document.querySelector(".brand-panel"),visual=document.querySelector(".visual");
 if(panel&&visual&&matchMedia("(pointer:fine)").matches){visual.addEventListener("pointermove",e=>{const r=visual.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;panel.style.animation="none";panel.style.transform="translate(-50%,-50%) rotateX("+(-y*5)+"deg) rotateY("+(x*7)+"deg)"});visual.addEventListener("pointerleave",()=>{panel.style.animation="panelFloat 7s ease-in-out infinite";panel.style.transform=""})}
 </script>
-<script src="/mobile-nav.js?v=3" defer></script>
+<script src="/mobile-nav.js?v=4" defer></script>
 </body>
 </html>
