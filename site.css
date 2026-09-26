@@ -277,3 +277,10 @@ nav .brand{width:44px!important;height:44px!important;flex:0 0 44px!important;di
 nav .brand-logo{display:block!important;width:44px!important;height:44px!important;max-width:44px!important;max-height:44px!important;flex:0 0 44px!important;object-fit:contain!important;object-position:center!important}
 @media(max-width:760px){body{padding-top:76px!important}nav{top:8px!important;left:10px!important;right:10px!important;width:auto!important;height:62px!important;min-height:62px!important;padding:7px 10px!important;border-radius:16px!important}nav .brand{width:44px!important;height:44px!important;flex-basis:44px!important}nav .brand-logo{width:44px!important;height:44px!important;max-width:44px!important;max-height:44px!important;flex-basis:44px!important}}
 @media(max-width:430px){nav .brand,nav .brand-logo{width:42px!important;height:42px!important;max-width:42px!important;max-height:42px!important;flex-basis:42px!important}}
+
+
+/* FINAL EXACT SWARIVO LOGO — supplied full logo, fitted consistently */
+nav .brand{width:64px!important;height:64px!important;flex:0 0 64px!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;padding:0!important;margin:0!important;gap:0!important}
+nav .brand-logo{display:block!important;width:64px!important;height:64px!important;max-width:64px!important;max-height:64px!important;flex:0 0 64px!important;object-fit:contain!important;object-position:center!important;visibility:visible!important;opacity:1!important}
+@media(max-width:760px){nav .brand{width:50px!important;height:50px!important;flex-basis:50px!important}nav .brand-logo{width:50px!important;height:50px!important;max-width:50px!important;max-height:50px!important;flex-basis:50px!important}}
+@media(max-width:430px){nav .brand{width:48px!important;height:48px!important;flex-basis:48px!important}nav .brand-logo{width:48px!important;height:48px!important;max-width:48px!important;max-height:48px!important;flex-basis:48px!important}}
