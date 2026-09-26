@@ -1,69 +1,53 @@
-function initMobileNav(){
-  const toggle=document.querySelector(".mobile-menu-toggle");
-  if(!toggle)return;
+(function(){
+  function setup(){
+    var toggle=document.querySelector(".mobile-menu-toggle");
+    if(!toggle || toggle.dataset.mobileNavReady==="1") return;
+    toggle.dataset.mobileNavReady="1";
 
-  /* Shared current-page highlight for desktop navigation and mobile drawer. */
-  const path=window.location.pathname.replace(/\\/+$/,"") || "/";
-  const hash=window.location.hash;
-  const isHome=path==="/" || path==="/index.html";
-  const isActive=(href)=>{
-    const u=new URL(href,window.location.origin);
-    const targetPath=u.pathname.replace(/\\/+$/,"") || "/";
-    if(u.hash==="#about" || u.hash==="#contact"){
-      if(u.hash==="#contact" && path==="/contact.html") return true;
-      return isHome && hash===u.hash;
+    var drawer=document.querySelector(".mobile-nav-drawer");
+    if(!drawer){
+      drawer=document.createElement("div");
+      drawer.className="mobile-nav-drawer";
+      drawer.innerHTML='<div class="mobile-nav-card" role="dialog" aria-modal="true" aria-label="Mobile navigation"><button class="mobile-nav-close" type="button" aria-label="Close navigation">×</button><div class="mobile-nav-label">SWARIVO</div><a class="mobile-nav-link" href="/">Home <span>→</span></a><a class="mobile-nav-link" href="/products.html">Products <span>→</span></a><a class="mobile-nav-link" href="/services.html">Web &amp; Software <span>→</span></a><a class="mobile-nav-link" href="/#about">About <span>→</span></a><a class="mobile-nav-link" href="/#contact">Contact <span>→</span></a></div>';
+      document.body.appendChild(drawer);
     }
-    return targetPath===path;
-  };
 
-  const highlightCss=document.createElement("style");
-  highlightCss.textContent=`
-    @media (min-width:761px){
-      nav .links a.nav-active{
-        background:#10291e !important;
-        color:#fff !important;
-        border-color:#10291e !important;
-        border-radius:999px !important;
-        padding:10px 17px !important;
-      }
-      nav .links a.nav-active:hover{background:#10291e !important;color:#fff !important}
+    function closeMenu(){
+      drawer.classList.remove("is-open");
+      toggle.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded","false");
+      toggle.setAttribute("aria-label","Open navigation menu");
+      document.body.classList.remove("menu-open");
     }
-    .mobile-nav-link.nav-active{
-      color:#1b5e3f !important;
-      background:rgba(118,185,87,.14) !important;
-      border-radius:12px !important;
-      padding-left:12px !important;
-      padding-right:12px !important;
+    function openMenu(){
+      drawer.classList.add("is-open");
+      toggle.classList.add("is-open");
+      toggle.setAttribute("aria-expanded","true");
+      toggle.setAttribute("aria-label","Close navigation menu");
+      document.body.classList.add("menu-open");
     }
-  `;
-  document.head.appendChild(highlightCss);
 
-  document.querySelectorAll("nav .links a").forEach(function(a){
-    if(isActive(a.getAttribute("href") || "")) a.classList.add("nav-active");
-  });
+    window.__swarivoMobileToggle=function(){
+      if(window.innerWidth>760){return false;}
+      if(drawer.classList.contains("is-open")) closeMenu();
+      else openMenu();
+      return false;
+    };
 
-  const drawer=document.createElement("div");
-  drawer.className="mobile-nav-drawer";
-  drawer.innerHTML='<div class="mobile-nav-card" role="dialog" aria-modal="true" aria-label="Mobile navigation"><button class="mobile-nav-close" type="button" aria-label="Close navigation">×</button><div class="mobile-nav-label">SWARIVO</div><a class="mobile-nav-link" href="/">Home <span>→</span></a><a class="mobile-nav-link" href="/products.html">Products <span>→</span></a><a class="mobile-nav-link" href="/services.html">Web &amp; Software <span>→</span></a><a class="mobile-nav-link" href="/#about">About <span>→</span></a><a class="mobile-nav-link" href="/#contact">Contact <span>→</span></a></div>';
-  document.body.appendChild(drawer);
+    toggle.onclick=function(e){
+      if(e){e.preventDefault();e.stopPropagation();}
+      window.__swarivoMobileToggle();
+      return false;
+    };
 
-  drawer.querySelectorAll(".mobile-nav-link").forEach(function(a){
-    if(isActive(a.getAttribute("href") || "")) a.classList.add("nav-active");
-  });
+    var close=drawer.querySelector(".mobile-nav-close");
+    if(close) close.onclick=function(e){if(e){e.preventDefault();e.stopPropagation();}closeMenu();return false;};
+    drawer.onclick=function(e){if(e.target===drawer) closeMenu();};
+    drawer.querySelectorAll(".mobile-nav-link").forEach(function(a){a.onclick=function(){closeMenu();};});
+    document.addEventListener("keydown",function(e){if(e.key==="Escape") closeMenu();});
+    window.addEventListener("resize",function(){if(window.innerWidth>760) closeMenu();});
+  }
 
-  const close=drawer.querySelector(".mobile-nav-close");
-  function shut(){drawer.classList.remove("is-open");toggle.classList.remove("is-open");toggle.setAttribute("aria-expanded","false");toggle.setAttribute("aria-label","Open navigation menu");document.body.classList.remove("menu-open");}
-  function open(){drawer.classList.add("is-open");toggle.classList.add("is-open");toggle.setAttribute("aria-expanded","true");toggle.setAttribute("aria-label","Close navigation menu");document.body.classList.add("menu-open");}
-  toggle.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();drawer.classList.contains("is-open")?shut():open()},{capture:true});
-  close.addEventListener("click",shut);
-  drawer.addEventListener("click",function(e){if(e.target===drawer)shut()});
-  drawer.querySelectorAll(".mobile-nav-link").forEach(a=>a.addEventListener("click",shut));
-  document.addEventListener("keydown",function(e){if(e.key==="Escape")shut()});
-  window.addEventListener("resize",function(){if(window.innerWidth>760)shut()});
-}
-
-if(document.readyState==="loading"){
-  document.addEventListener("DOMContentLoaded",initMobileNav,{once:true});
-}else{
-  initMobileNav();
-}
+  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",setup,{once:true});
+  else setup();
+})();
