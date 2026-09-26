@@ -290,19 +290,13 @@ nav .brand-logo{display:block!important;width:64px!important;height:64px!importa
 nav .links a.nav-active{
   position:relative!important;
   color:#10291e!important;
-  font-weight:700!important;
-}
-nav .links a.nav-active:not(.pill)::after{
-  content:""!important;
-  position:absolute!important;
-  left:50%!important;
-  bottom:2px!important;
-  width:18px!important;
-  height:3px!important;
+  font-weight:800!important;
+  background:rgba(118,185,87,.22)!important;
   border-radius:999px!important;
-  background:#76b957!important;
-  transform:translateX(-50%)!important;
+  padding:8px 14px!important;
+  box-shadow:inset 0 0 0 1px rgba(118,185,87,.32)!important;
 }
+nav .links a.nav-active:not(.pill)::after{display:none!important}
 nav .links a.pill.nav-active{
   background:#76b957!important;
   color:#10291e!important;
