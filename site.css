@@ -298,9 +298,10 @@ nav .links a.nav-active{
 }
 nav .links a.nav-active:not(.pill)::after{display:none!important}
 nav .links a.pill.nav-active{
-  background:#76b957!important;
-  color:#10291e!important;
-  box-shadow:0 0 0 2px rgba(118,185,87,.18)!important;
+  background:#10291e!important;
+  color:#fff!important;
+  box-shadow:none!important;
+  border:1px solid rgba(16,41,30,.18)!important;
 }
 .mobile-nav-link.nav-active{
   background:rgba(118,185,87,.16)!important;
