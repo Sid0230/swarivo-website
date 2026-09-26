@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded",function(){
   const hash=window.location.hash;
   const links=document.querySelectorAll("nav .links a");
   const isProducts=path==="/products.html" || /-(products)\\.html$/.test(path);
-  const activeKey=path==="/" ? (hash==="#about"?"about":hash==="#contact"?"contact":"home") :
+    if(!document.getElementById("swarivo-active-nav-style")){const s=document.createElement("style");s.id="swarivo-active-nav-style";s.textContent='.nav-active{position:relative!important;color:#10291e!important;font-weight:800!important;background:rgba(118,185,87,.22)!important;border-radius:999px!important;padding:8px 14px!important;box-shadow:inset 0 0 0 1px rgba(118,185,87,.32)!important}.nav-active.pill{background:#10291e!important;color:#fff!important;box-shadow:none!important}.mobile-nav-link.nav-active{background:rgba(118,185,87,.16)!important;color:#10291e!important;font-weight:800!important;border-color:rgba(118,185,87,.35)!important}';document.head.appendChild(s)}\n\nconst activeKey=path==="/" ? (hash==="#about"?"about":hash==="#contact"?"contact":"home") :
     isProducts ? "products" :
     path==="/services.html" ? "services" :
     path==="/contact.html" ? "contact" : "";
