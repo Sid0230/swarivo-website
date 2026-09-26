@@ -1,29 +1,63 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title">
-<title id="title">SWARIVO Product Mark</title>
+<title id="title">SWARIVO premium product mark</title>
 <defs>
- <linearGradient id="deep" x1="72" y1="48" x2="173" y2="199" gradientUnits="userSpaceOnUse">
-  <stop stop-color="#0A6842"/><stop offset=".52" stop-color="#087B48"/><stop offset="1" stop-color="#06412D"/>
+ <linearGradient id="ribbon" x1="55" y1="48" x2="188" y2="202" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#D8F57C"/><stop offset=".20" stop-color="#73D65B"/><stop offset=".48" stop-color="#14A965"/><stop offset=".72" stop-color="#087B50"/><stop offset="1" stop-color="#063E31"/>
  </linearGradient>
- <linearGradient id="fresh" x1="105" y1="35" x2="190" y2="111" gradientUnits="userSpaceOnUse">
-  <stop stop-color="#B5EA72"/><stop offset=".45" stop-color="#72D13F"/><stop offset="1" stop-color="#36A33C"/>
+ <linearGradient id="leaf" x1="116" y1="30" x2="184" y2="101" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#E4FF9A"/><stop offset=".42" stop-color="#9AE65C"/><stop offset="1" stop-color="#39B946"/>
  </linearGradient>
- <filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#063C29" flood-opacity=".18"/></filter>
+ <linearGradient id="edge" x1="75" y1="75" x2="173" y2="180" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#F0FFB0" stop-opacity=".9"/><stop offset=".55" stop-color="#79E8A0" stop-opacity=".3"/><stop offset="1" stop-color="#073B2C" stop-opacity="0"/>
+ </linearGradient>
+ <filter id="depth" x="-35%" y="-35%" width="170%" height="170%">
+   <feDropShadow dx="0" dy="12" stdDeviation="9" flood-color="#001B13" flood-opacity=".42"/>
+ </filter>
 </defs>
-<g filter="url(#soft)">
- <!-- refined S ribbon -->
- <path fill="url(#deep)" d="M151 48c-17 1-35 7-47 17-10 8-15 17-15 25 0 11 8 18 25 25l42 18c24 10 35 24 33 41-2 16-13 29-31 38-13 7-28 10-45 9 26-7 40-17 43-29 3-10-4-17-20-24l-42-18c-27-12-39-28-35-47 4-20 20-37 45-48 15-6 31-9 47-7z"/>
- <!-- lower sweep that makes the S read clearly -->
- <path fill="url(#deep)" d="M76 139c12 18 30 30 53 38 17 6 28 13 32 22-6 14-17 23-33 29-22-7-40-17-54-31-13-13-21-27-24-43 8-3 17-7 26-15z"/>
- <!-- elegant leaf -->
- <path fill="url(#fresh)" d="M116 83c8-28 28-48 61-59 12-4 23-6 34-6-2 28-12 51-30 67-16 14-36 22-60 24 1-9-1-17-5-26z"/>
- <!-- leaf vein -->
- <path d="M132 93c16-20 31-35 49-49" fill="none" stroke="#E9F8D4" stroke-width="4.5" stroke-linecap="round" opacity=".9"/>
- <!-- subtle inner highlight -->
- <path d="M91 81c4-10 13-19 27-27" fill="none" stroke="#9AD875" stroke-width="4" stroke-linecap="round" opacity=".45"/>
+<g filter="url(#depth)">
+ <!-- single continuous premium S ribbon -->
+ <path fill="url(#ribbon)" d="M154 42
+   C132 42 107 48 91 60
+   C78 70 72 82 76 94
+   C80 106 92 113 112 121
+   L153 138
+   C171 146 179 155 177 166
+   C175 179 160 190 140 196
+   C125 201 108 201 93 197
+   C111 210 133 214 153 208
+   C179 201 197 185 200 165
+   C203 143 189 126 163 115
+   L122 98
+   C110 93 105 87 108 81
+   C112 72 128 66 151 63
+   C166 61 177 63 187 66
+   C180 51 169 43 154 42 Z"/>
+ <!-- cut / inner negative curve gives the logo its crisp S read -->
+ <path fill="#092E24" d="M92 116
+   C106 124 124 131 145 139
+   C157 144 163 150 162 156
+   C160 164 150 170 136 174
+   C119 179 102 178 89 173
+   C101 188 121 194 141 190
+   C161 186 176 174 179 160
+   C182 145 172 134 153 126
+   L112 109 C103 105 96 101 92 96
+   C86 103 86 110 92 116 Z"/>
+ <!-- upper leaf -->
+ <path fill="url(#leaf)" d="M112 82
+   C117 55 135 34 164 22
+   C177 17 188 15 199 16
+   C198 40 190 60 175 75
+   C159 91 138 99 115 99
+   C116 93 114 87 112 82 Z"/>
+ <path d="M127 84 C145 63 161 48 181 35" fill="none" stroke="#F2FFD0" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+ <!-- controlled highlight on ribbon -->
+ <path d="M94 69 C106 57 124 51 145 49" fill="none" stroke="url(#edge)" stroke-width="7" stroke-linecap="round"/>
+ <path d="M82 91 C86 103 98 110 116 117" fill="none" stroke="#D9FF9B" stroke-width="4" stroke-linecap="round" opacity=".65"/>
 </g>
 <style>
-g{transform-origin:120px 120px;animation:markFloat 5s cubic-bezier(.4,0,.2,1) infinite}
-@keyframes markFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-4px) scale(1.012)}}
+g{transform-origin:120px 120px;animation:swarivoPremiumFloat 6s cubic-bezier(.4,0,.2,1) infinite}
+@keyframes swarivoPremiumFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-3px) scale(1.008)}}
 @media(prefers-reduced-motion:reduce){g{animation:none}}
 </style>
 </svg>
