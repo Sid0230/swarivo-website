@@ -137,6 +137,117 @@ nav .brand-logo{width:48px!important;height:48px!important;max-width:48px!import
   }
 }
 </style>
-</head><body><div class="bg"></div><nav><a class="brand" href="/" aria-label="SWARIVO home"><img class="brand-logo" src="/swarivo-logo.svg?v=header-exact-3" alt="SWARIVO"></a><div class="links"><a href="/">Home</a><a href="/products.html">Products</a><a href="/services.html">Web &amp; Software</a><a href="/#about">About</a><a class="pill" href="/#contact">Contact</a></div><button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button></nav><main><section class="page-hero dark"><div class="eyebrow">SWARIVO / WEB &amp; SOFTWARE</div><h1>Digital systems that<br><em>work for the business.</em></h1><p>From a professional website to custom business software, we build practical digital experiences around real requirements.</p></section><section class="service-stack"><article><div class="num">01</div><div><h2>Website Development</h2><p>Professional, responsive websites for businesses, brands, services and organizations. Clear structure, modern design, mobile-first experience and performance-conscious implementation.</p><ul><li>Business &amp; corporate websites</li><li>Landing pages</li><li>Brand websites</li><li>Responsive design</li></ul></div></article><article><div class="num">02</div><div><h2>E-commerce Website Development</h2><p>Online stores designed around products, customers and the complete buying journey.</p><ul><li>Product catalogues</li><li>Shopping and checkout flows</li><li>Order management foundations</li><li>Payment and delivery integrations</li></ul></div></article><article><div class="num">03</div><div><h2>Web Applications</h2><p>Browser-based applications that replace repetitive manual workflows with connected, accessible systems.</p><ul><li>Customer portals</li><li>Internal business tools</li><li>Dashboards</li><li>Workflow applications</li></ul></div></article><article><div class="num">04</div><div><h2>ERP Software &amp; Business Management Systems</h2><p>Connected systems for operations, products, suppliers, purchasing, inventory, sales, customers, finance, reporting and business workflows.</p><ul><li>Inventory &amp; stock management</li><li>Purchasing &amp; supplier management</li><li>Sales &amp; customer management</li><li>Finance, GST &amp; reporting workflows</li><li>Roles, approvals &amp; audit trails</li></ul></div></article><article><div class="num">05</div><div><h2>Custom Software Solutions</h2><p>Purpose-built software for requirements that do not fit an off-the-shelf product.</p><ul><li>Custom business systems</li><li>Database-driven applications</li><li>API integrations</li><li>Automation &amp; workflow tools</li></ul></div></article><article><div class="num">06</div><div><h2>Maintenance &amp; Improvements</h2><p>Ongoing technical support, content changes, improvements, performance work and feature expansion after launch.</p><ul><li>Website updates</li><li>Bug fixes</li><li>Feature additions</li><li>Technical improvements</li></ul></div></article></section><section class="statement dark-box"><div class="eyebrow">THE PROCESS</div><h2>Understand. Design. Build.<br>Improve.</h2><div class="process"><span>01 Understand</span><span>02 Plan</span><span>03 Design</span><span>04 Build</span><span>05 Test</span><span>06 Improve</span></div><a class="cta" href="/#contact">Discuss your project →</a></section></main><footer><span>© 2026 SWARIVO · Everyday life. Made simple.</span><span><a href="/privacy-policy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/contact.html">Contact</a></span></footer>
+<style id="swarivo-services-premium">
+.services-premium{background:#f5f3ed;color:#10291e;overflow:hidden}
+.services-hero{position:relative;min-height:720px;padding:110px clamp(24px,6vw,90px) 90px;background:
+radial-gradient(circle at 82% 28%,rgba(137,211,105,.22),transparent 28%),
+radial-gradient(circle at 12% 85%,rgba(27,94,63,.12),transparent 30%),
+#f5f3ed;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(420px,.98fr);gap:70px;align-items:center}
+.services-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 55%,rgba(255,255,255,.45));pointer-events:none}
+.services-hero-copy,.services-dashboard{position:relative;z-index:1}
+.services-kicker{display:inline-flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.2em;font-size:10px;font-weight:800;color:#1b5e3f}
+.services-kicker:before{content:"";width:42px;height:1px;background:#78b957}
+.services-hero h1{font:800 clamp(52px,6.2vw,88px)/.94 Manrope,sans-serif;letter-spacing:-.06em;margin:24px 0 28px;max-width:820px}
+.services-hero h1 em{font-style:normal;color:#247047}
+.services-lead{max-width:680px;font-size:19px;line-height:1.7;color:#53625a;margin:0 0 34px}
+.services-hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.services-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:0 22px;border-radius:999px;text-decoration:none;font-weight:800;font-size:13px}
+.services-btn.primary{background:#10291e;color:#fff;box-shadow:0 14px 35px rgba(16,41,30,.16)}
+.services-btn.secondary{border:1px solid rgba(16,41,30,.18);color:#10291e;background:rgba(255,255,255,.55)}
+.services-proof{display:flex;gap:28px;flex-wrap:wrap;margin-top:45px;padding-top:24px;border-top:1px solid rgba(16,41,30,.12)}
+.services-proof b{display:block;font:800 18px Manrope}.services-proof span{font-size:11px;color:#748078;letter-spacing:.08em;text-transform:uppercase}
+
+.services-dashboard{min-height:530px;border-radius:30px;padding:16px;background:rgba(255,255,255,.48);border:1px solid rgba(16,41,30,.1);box-shadow:0 35px 90px rgba(16,41,30,.14);backdrop-filter:blur(15px);transform:rotate(1.5deg)}
+.dashboard-window{height:100%;min-height:498px;border-radius:22px;background:#10291e;color:#fff;overflow:hidden;position:relative}
+.dashboard-window:before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;right:-100px;top:-120px;background:radial-gradient(circle,rgba(155,230,109,.32),transparent 68%)}
+.dashboard-top{height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid rgba(255,255,255,.1)}
+.dashboard-brand{font:800 12px Manrope;letter-spacing:.12em}.dashboard-dots{display:flex;gap:5px}.dashboard-dots i{width:6px;height:6px;border-radius:50%;background:#9be66d}
+.dashboard-body{padding:24px;position:relative;z-index:1}.dashboard-label{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#9be66d;font-weight:800}.dashboard-title{font:800 30px/1.05 Manrope;margin:8px 0 22px;letter-spacing:-.04em}
+.metric-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.metric{padding:16px;border-radius:15px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.09)}.metric small{display:block;color:#aabbb0;font-size:9px;text-transform:uppercase;letter-spacing:.1em}.metric b{display:block;font:800 22px Manrope;margin-top:8px}.metric em{font-style:normal;color:#9be66d;font-size:10px}
+.dashboard-panel{margin-top:12px;padding:18px;border-radius:17px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08)}.panel-head{display:flex;justify-content:space-between;align-items:center;font-size:10px;color:#cbd8d0}.panel-head b{color:#fff}.chart{height:145px;margin-top:14px;position:relative;overflow:hidden}.chart:before{content:"";position:absolute;left:0;right:0;bottom:18px;height:1px;background:rgba(255,255,255,.1);box-shadow:0 -36px 0 rgba(255,255,255,.07),0 -72px 0 rgba(255,255,255,.06)}.chart svg{width:100%;height:100%}.dash-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}.dash-card{padding:16px;border-radius:16px;background:#f5f3ed;color:#10291e}.dash-card span{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#748078}.dash-card b{display:block;font-size:14px;margin-top:8px}.dash-card i{display:inline-block;margin-top:10px;width:8px;height:8px;border-radius:50%;background:#78b957}
+
+.services-section{padding:115px clamp(24px,6vw,90px);max-width:1320px;margin:auto}
+.services-section-head{display:flex;justify-content:space-between;gap:50px;align-items:end;margin-bottom:55px}.services-section-head h2{font:800 clamp(40px,5vw,68px)/.98 Manrope;letter-spacing:-.055em;margin:12px 0 0;max-width:700px}.services-section-head p{max-width:420px;color:#68756e;line-height:1.7;margin:0}
+.service-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service-card{min-height:310px;padding:28px;border:1px solid rgba(16,41,30,.11);border-radius:24px;background:rgba(255,255,255,.58);display:flex;flex-direction:column;transition:.3s;position:relative;overflow:hidden}.service-card:hover{transform:translateY(-7px);background:#fff;box-shadow:0 25px 65px rgba(16,41,30,.1)}.service-card.featured{background:#10291e;color:#fff;border-color:#10291e}.service-card .service-num{font-size:10px;letter-spacing:.18em;color:#78b957;font-weight:800}.service-card h3{font:750 28px/1.05 Manrope;margin:70px 0 12px;letter-spacing:-.035em}.service-card p{font-size:14px;line-height:1.65;color:#68756e;margin:0}.service-card.featured p{color:#b7c5bc}.service-arrow{margin-top:auto;padding-top:28px;font-size:12px;font-weight:800;color:#247047}.featured .service-arrow{color:#9be66d}
+
+.services-dark{background:#10291e;color:#fff;padding:115px clamp(24px,6vw,90px)}.services-dark-inner{max-width:1250px;margin:auto}.services-dark .section-kicker{color:#9be66d}.services-dark h2{font:800 clamp(42px,5.5vw,72px)/.96 Manrope;letter-spacing:-.055em;max-width:850px;margin:15px 0 55px}.process-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.process-item{padding:22px 17px;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:rgba(255,255,255,.035)}.process-item b{display:block;color:#9be66d;font-size:11px;letter-spacing:.1em}.process-item span{display:block;margin-top:18px;font:700 16px Manrope}.process-item p{font-size:11px;line-height:1.5;color:#9eaea5;margin:8px 0 0}
+
+.services-cta{margin-top:18px;background:#dff3c9;border-radius:30px;padding:65px 70px;color:#10291e;display:flex;align-items:center;justify-content:space-between;gap:40px}.services-cta h2{font:800 clamp(34px,4.5vw,58px)/1 Manrope;letter-spacing:-.05em;margin:0}.services-cta p{max-width:470px;color:#53625a;line-height:1.6;margin:12px 0 0}.services-cta .services-btn{background:#10291e;color:#fff;white-space:nowrap}
+
+@media(max-width:1000px){.services-hero{grid-template-columns:1fr;gap:45px}.services-dashboard{max-width:760px;width:100%;margin:auto}.service-cards{grid-template-columns:1fr 1fr}.process-grid{grid-template-columns:repeat(3,1fr)}.services-section-head{display:block}.services-section-head p{margin-top:20px}}
+@media(max-width:700px){.services-hero{min-height:auto;padding-top:90px}.services-hero h1{font-size:clamp(48px,14vw,68px)}.services-lead{font-size:16px}.services-proof{gap:18px}.services-dashboard{transform:none;min-height:430px}.dashboard-window{min-height:398px}.dashboard-body{padding:18px}.dashboard-title{font-size:25px}.metric-grid{grid-template-columns:1fr 1fr}.metric:last-child{grid-column:span 2}.service-cards{grid-template-columns:1fr}.service-card{min-height:260px}.service-card h3{margin-top:55px}.process-grid{grid-template-columns:1fr 1fr}.services-cta{display:block;padding:42px 28px}.services-cta .services-btn{margin-top:25px}}
+@media(max-width:430px){.services-hero{padding-left:20px;padding-right:20px}.services-section,.services-dark{padding-left:20px;padding-right:20px}.services-dashboard{padding:9px;border-radius:23px}.dashboard-window{border-radius:17px}.dashboard-body{padding:15px}.dashboard-title{font-size:23px}.metric{padding:12px}.metric b{font-size:18px}.services-proof b{font-size:16px}.process-grid{grid-template-columns:1fr}.services-cta{border-radius:22px}}
+</style>
+</head><body><div class="bg"></div><nav><a class="brand" href="/" aria-label="SWARIVO home"><img class="brand-logo" src="/swarivo-logo.svg?v=header-exact-3" alt="SWARIVO"></a><div class="links"><a href="/">Home</a><a href="/products.html">Products</a><a href="/services.html">Web &amp; Software</a><a href="/#about">About</a><a class="pill" href="/#contact">Contact</a></div><button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button></nav><main class="services-premium">
+<section class="services-hero">
+  <div class="services-hero-copy">
+    <div class="services-kicker">WEB &amp; SOFTWARE / DIGITAL SYSTEMS</div>
+    <h1>We build digital systems that <em>move businesses forward.</em></h1>
+    <p class="services-lead">From high-converting websites to custom business platforms, SWARIVO turns real business requirements into clear, scalable digital experiences.</p>
+    <div class="services-hero-actions">
+      <a class="services-btn primary" href="/#contact">Start a project <span>→</span></a>
+      <a class="services-btn secondary" href="#services">Explore solutions</a>
+    </div>
+    <div class="services-proof">
+      <div><b>01</b><span>Clear strategy</span></div>
+      <div><b>02</b><span>Modern design</span></div>
+      <div><b>03</b><span>Built to scale</span></div>
+    </div>
+  </div>
+  <div class="services-dashboard" aria-label="Illustration of a SWARIVO business dashboard">
+    <div class="dashboard-window">
+      <div class="dashboard-top"><span class="dashboard-brand">SWARIVO / BUSINESS OS</span><span class="dashboard-dots"><i></i><i></i><i></i></span></div>
+      <div class="dashboard-body">
+        <div class="dashboard-label">Operations overview</div>
+        <div class="dashboard-title">One system.<br>Better decisions.</div>
+        <div class="metric-grid">
+          <div class="metric"><small>Orders</small><b>1,284</b><em>+18.4%</em></div>
+          <div class="metric"><small>Revenue</small><b>₹8.4L</b><em>+12.7%</em></div>
+          <div class="metric"><small>Stock health</small><b>94%</b><em>Healthy</em></div>
+        </div>
+        <div class="dashboard-panel">
+          <div class="panel-head"><b>Business performance</b><span>Last 30 days</span></div>
+          <div class="chart"><svg viewBox="0 0 600 160" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#9be66d" stop-opacity=".28"/><stop offset="1" stop-color="#9be66d" stop-opacity="0"/></linearGradient></defs><path d="M0 130 C55 118 70 128 110 104 S175 110 220 80 S280 105 320 65 S385 75 425 48 S485 70 525 35 S570 45 600 18 L600 160 L0 160Z" fill="url(#chartFill)"/><path d="M0 130 C55 118 70 128 110 104 S175 110 220 80 S280 105 320 65 S385 75 425 48 S485 70 525 35 S570 45 600 18" fill="none" stroke="#9be66d" stroke-width="4" stroke-linecap="round"/></svg></div>
+        </div>
+        <div class="dash-row"><div class="dash-card"><span>Workflow</span><b>12 tasks automated</b><i></i></div><div class="dash-card"><span>Customers</span><b>2,480 active</b><i></i></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services-section" id="services">
+  <div class="services-section-head">
+    <div><div class="services-kicker">WHAT WE BUILD</div><h2>Digital products designed around the way your business actually works.</h2></div>
+    <p>Choose a focused solution or combine services into one complete digital system. We keep the experience simple for your team and your customers.</p>
+  </div>
+  <div class="service-cards">
+    <article class="service-card"><span class="service-num">01 / PRESENCE</span><h3>Business Websites</h3><p>Premium responsive websites that communicate trust, explain your offer clearly and turn visitors into enquiries.</p><span class="service-arrow">Websites &amp; landing pages →</span></article>
+    <article class="service-card"><span class="service-num">02 / COMMERCE</span><h3>E-commerce</h3><p>Product-led shopping experiences with catalogues, checkout, payments, order flows and scalable foundations.</p><span class="service-arrow">Stores that sell →</span></article>
+    <article class="service-card featured"><span class="service-num">03 / SYSTEMS</span><h3>Business Platforms</h3><p>Dashboards, portals and internal tools that connect operations, customers, products and decisions in one place.</p><span class="service-arrow">Build your platform →</span></article>
+    <article class="service-card"><span class="service-num">04 / ERP</span><h3>ERP &amp; Management</h3><p>Inventory, purchasing, suppliers, sales, customers, reporting, roles and approval workflows built around your operation.</p><span class="service-arrow">Modernize operations →</span></article>
+    <article class="service-card"><span class="service-num">05 / AUTOMATION</span><h3>Custom Software</h3><p>Purpose-built applications, APIs and workflow automation for requirements that standard software cannot handle.</p><span class="service-arrow">Solve the hard workflow →</span></article>
+    <article class="service-card"><span class="service-num">06 / GROWTH</span><h3>Support &amp; Evolution</h3><p>Continuous improvements, feature expansion, maintenance and technical support after your product goes live.</p><span class="service-arrow">Keep improving →</span></article>
+  </div>
+</section>
+
+<section class="services-dark">
+  <div class="services-dark-inner">
+    <div class="services-kicker section-kicker">HOW WE WORK</div>
+    <h2>A serious process for building software that people actually use.</h2>
+    <div class="process-grid">
+      <div class="process-item"><b>01</b><span>Discover</span><p>Understand your business, users and goals.</p></div>
+      <div class="process-item"><b>02</b><span>Structure</span><p>Map workflows, content and system requirements.</p></div>
+      <div class="process-item"><b>03</b><span>Design</span><p>Create a clear, premium user experience.</p></div>
+      <div class="process-item"><b>04</b><span>Build</span><p>Develop the product with scalable foundations.</p></div>
+      <div class="process-item"><b>05</b><span>Validate</span><p>Test flows, performance and real-world usage.</p></div>
+      <div class="process-item"><b>06</b><span>Launch</span><p>Deploy, measure and keep improving.</p></div>
+    </div>
+    <div class="services-cta">
+      <div><h2>Have a business idea, problem or workflow to improve?</h2><p>Tell us what you are trying to build. We will turn the requirement into a practical digital plan.</p></div>
+      <a class="services-btn" href="/#contact">Discuss your project →</a>
+    </div>
+  </div>
+</section>
+</main><footer><span>© 2026 SWARIVO · Everyday life. Made simple.</span><span><a href="/privacy-policy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/contact.html">Contact</a></span></footer>
 <script src="/mobile-nav.js?v=3" defer></script>
 </body></html>
