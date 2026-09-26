@@ -1,0 +1,31 @@
+name: Security checks
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  static-security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check for accidentally committed secrets
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check for dangerous HTML patterns
+        shell: bash
+        run: |
+          set -e
+          if grep -RInE '(<script[^>]+src=["'\''"]?https?://|javascript:|onerror=|onload=)' --include='*.html' .; then
+            echo "Potentially unsafe HTML pattern detected."
+            exit 1
+          fi
