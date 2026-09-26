@@ -14,6 +14,14 @@
 .product-hero .hero-logo-svg{display:block!important;width:136px!important;height:136px!important;max-width:none!important;max-height:none!important}
 @media(max-width:850px){.product-hero .hero-core{width:150px!important;height:150px!important}.product-hero .hero-logo-svg{width:112px!important;height:112px!important}}
 @media(max-width:560px){.product-hero .hero-core{width:118px!important;height:118px!important}.product-hero .hero-logo-svg{width:88px!important;height:88px!important}}
+
+/* FINAL CLICKABILITY FIX */
+.product-hero:before,.product-hero:after,.product-hero-noise,.hero-light,.bg{pointer-events:none!important}
+nav{position:relative!important;z-index:5000!important}
+nav a,nav button{position:relative!important;z-index:5001!important;pointer-events:auto!important}
+@media(max-width:760px){nav{position:fixed!important;z-index:5000!important}.mobile-menu-toggle{position:relative!important;z-index:5002!important;pointer-events:auto!important}.mobile-nav-drawer{z-index:6000!important}}
+.category-grid{display:grid!important;position:relative!important;z-index:2!important}
+.category-grid .cat,.hero-actions a,.backtop{position:relative!important;z-index:3!important;pointer-events:auto!important;cursor:pointer!important}
 </style><style>
 /* SWARIVO shared mobile/tablet header */
 @media (max-width:760px){
