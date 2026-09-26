@@ -284,7 +284,3 @@ nav .brand{width:64px!important;height:64px!important;flex:0 0 64px!important;di
 nav .brand-logo{display:block!important;width:64px!important;height:64px!important;max-width:64px!important;max-height:64px!important;flex:0 0 64px!important;object-fit:contain!important;object-position:center!important;visibility:visible!important;opacity:1!important}
 @media(max-width:760px){nav .brand{width:50px!important;height:50px!important;flex-basis:50px!important}nav .brand-logo{width:50px!important;height:50px!important;max-width:50px!important;max-height:50px!important;flex-basis:50px!important}}
 @media(max-width:430px){nav .brand{width:48px!important;height:48px!important;flex-basis:48px!important}nav .brand-logo{width:48px!important;height:48px!important;max-width:48px!important;max-height:48px!important;flex-basis:48px!important}}
-
-
-/* Final shared Contact CTA appearance */
-nav .links a.pill, nav .links .pill{background:#10291e!important;color:#fff!important;border:1px solid #10291e!important;border-radius:999px!important;box-shadow:0 5px 14px rgba(16,41,30,.16)!important;text-decoration:none!important;}
