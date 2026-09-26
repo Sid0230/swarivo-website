@@ -284,3 +284,34 @@ nav .brand{width:64px!important;height:64px!important;flex:0 0 64px!important;di
 nav .brand-logo{display:block!important;width:64px!important;height:64px!important;max-width:64px!important;max-height:64px!important;flex:0 0 64px!important;object-fit:contain!important;object-position:center!important;visibility:visible!important;opacity:1!important}
 @media(max-width:760px){nav .brand{width:50px!important;height:50px!important;flex-basis:50px!important}nav .brand-logo{width:50px!important;height:50px!important;max-width:50px!important;max-height:50px!important;flex-basis:50px!important}}
 @media(max-width:430px){nav .brand{width:48px!important;height:48px!important;flex-basis:48px!important}nav .brand-logo{width:48px!important;height:48px!important;max-width:48px!important;max-height:48px!important;flex-basis:48px!important}}
+
+
+/* ACTIVE PAGE NAVIGATION */
+nav .links a.nav-active{
+  position:relative!important;
+  color:#10291e!important;
+  font-weight:700!important;
+}
+nav .links a.nav-active:not(.pill)::after{
+  content:""!important;
+  position:absolute!important;
+  left:50%!important;
+  bottom:2px!important;
+  width:18px!important;
+  height:3px!important;
+  border-radius:999px!important;
+  background:#76b957!important;
+  transform:translateX(-50%)!important;
+}
+nav .links a.pill.nav-active{
+  background:#76b957!important;
+  color:#10291e!important;
+  box-shadow:0 0 0 2px rgba(118,185,87,.18)!important;
+}
+.mobile-nav-link.nav-active{
+  background:rgba(118,185,87,.16)!important;
+  color:#10291e!important;
+  font-weight:800!important;
+  border-color:rgba(118,185,87,.35)!important;
+}
+.mobile-nav-link.nav-active span{color:#4f8d37!important}
