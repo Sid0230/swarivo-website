@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded",function(){
     const u=new URL(href,window.location.origin);
     const targetPath=u.pathname.replace(/\\/+$/,"") || "/";
     if(u.hash==="#about" || u.hash==="#contact"){
-      if(u.hash==="#contact" && path==="/contact.html") return true;\n      return isHome && hash===u.hash;
+      if(u.hash==="#contact" && path==="/contact.html") return true;
+      return isHome && hash===u.hash;
     }
     return targetPath===path;
   };
