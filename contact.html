@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head>
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; media-src 'self' https:; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://formsubmit.co; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; media-src 'self' https:; upgrade-insecure-requests">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <meta http-equiv="X-Content-Type-Options" content="nosniff"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Contact SWARIVO — SWARIVO</title><link rel="canonical" href="https://www.swarivo.in/contact.html"><meta name="description" content="Contact SWARIVO for customer enquiries, suppliers, partnerships and business matters."><meta name="theme-color" content="#10291e"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>body{font-family:Poppins,Arial,sans-serif;max-width:850px;margin:auto;padding:40px 22px;line-height:1.75;color:#222;background:#faf9f6}a{color:#1B5E3F}h1,h2{color:#1B5E3F}h1{font-size:40px}h2{margin-top:32px}nav{margin-bottom:38px}small{color:#666}</style>
 <style id="swarivo-mobile-header">
@@ -82,6 +82,27 @@ body.menu-open{overflow:hidden!important}
   }
 }
 </style>
-</head><body><nav><a class="brand" href="/" aria-label="SWARIVO home"><img class="brand-logo" src="/swarivo-logo.svg?v=header-exact-3" alt="SWARIVO"></a><div class="links"><a href="/">Home</a><a href="/products.html">Products</a><a href="/services.html">Web &amp; Software</a><a href="/#about">About</a><a class="pill" href="/#contact">Contact</a></div><button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" onclick="return window.__swarivoMobileToggle ? window.__swarivoMobileToggle() : false;"><span></span><span></span><span></span></button></nav><h1>Contact SWARIVO</h1><small>Last updated: 18 September 2026</small><p>For general questions, customer enquiries and website matters:</p><p><strong>Email:</strong> <a href="mailto:hello@swarivo.in">hello@swarivo.in</a></p><p>For suppliers, partnerships and business enquiries:</p><p><strong>Email:</strong> <a href="mailto:business@swarivo.in">business@swarivo.in</a></p><p><strong>SWARIVO</strong><br>Everyday life. Made simple.</p>
+<style>
+.swarivo-contact-form{display:grid;gap:9px;max-width:620px;margin:24px 0 40px}
+.swarivo-contact-form label{font-size:13px;font-weight:700}
+.swarivo-contact-form input,.swarivo-contact-form textarea{width:100%;box-sizing:border-box;border:1px solid #d3dbd3;border-radius:10px;background:#fff;padding:13px;font:inherit;color:#17201b}
+.swarivo-contact-form textarea{resize:vertical}
+.swarivo-contact-form button{justify-self:start;border:0;border-radius:999px;background:#10291e;color:#fff;padding:13px 22px;font:600 14px Arial,sans-serif;cursor:pointer}
+</style></head><body><nav><a class="brand" href="/" aria-label="SWARIVO home"><img class="brand-logo" src="/swarivo-logo.svg?v=header-exact-3" alt="SWARIVO"></a><div class="links"><a href="/">Home</a><a href="/products.html">Products</a><a href="/services.html">Web &amp; Software</a><a href="/#about">About</a><a class="pill" href="/#contact">Contact</a></div><button class="mobile-menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" onclick="return window.__swarivoMobileToggle ? window.__swarivoMobileToggle() : false;"><span></span><span></span><span></span></button></nav><h1>Contact SWARIVO</h1><small>Last updated: 18 September 2026</small><p>For general questions, customer enquiries and website matters:</p><p><strong>Email:</strong> <a href="mailto:hello@swarivo.in">hello@swarivo.in</a></p><p>For suppliers, partnerships and business enquiries:</p><p><strong>Email:</strong> <a href="mailto:business@swarivo.in">business@swarivo.in</a></p>
+<h2>Send us a message</h2>
+<p>Complete the form below and your enquiry will be sent to our business email.</p>
+<form class="swarivo-contact-form" action="https://formsubmit.co/business@swarivo.in" method="POST">
+<input type="hidden" name="_subject" value="New SWARIVO website enquiry">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_next" value="https://www.swarivo.in/contact.html?sent=1">
+<label for="contact-name">Name</label><input id="contact-name" name="name" type="text" autocomplete="name" maxlength="100" required>
+<label for="contact-email">Email</label><input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+<label for="contact-message">Message</label><textarea id="contact-message" name="message" rows="6" maxlength="5000" required></textarea>
+<button type="submit">Send message</button>
+<p><small>By submitting, you agree that SWARIVO may use these details to respond to your enquiry.</small></p>
+</form>
+<p><strong>SWARIVO</strong><br>Everyday life. Made simple.</p>
+<script>if(new URLSearchParams(location.search).get('sent')==='1'){const notice=document.createElement('p');notice.textContent='Thank you — your message has been submitted.';notice.setAttribute('role','status');notice.style.color='#1b5e3f';document.querySelector('.swarivo-contact-form').before(notice);}</script>
 <script src="/mobile-nav.js?v=4" defer></script>
 </body></html>
