@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://formsubmit.co; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; media-src 'self' https:; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://formsubmit.co; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self' https://formsubmit.co; media-src 'self' https:; upgrade-insecure-requests">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -275,11 +275,10 @@ nav .brand-logo{width:48px!important;height:48px!important;max-width:48px!import
 <div class="contact-form-wrap">
   <h3>Send us a message</h3>
   <p>Share your details and we’ll receive your enquiry by email.</p>
-  <form class="swarivo-contact-form" action="https://formsubmit.co/business@swarivo.in" method="POST">
+  <form class="swarivo-contact-form" action="https://formsubmit.co/ajax/business@swarivo.in" method="POST">
     <input type="hidden" name="_subject" value="New SWARIVO website enquiry">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_captcha" value="true">
-    <input type="hidden" name="_next" value="https://www.swarivo.in/contact.html?sent=1">
     <label for="home-contact-name">Name</label><input id="home-contact-name" name="name" type="text" autocomplete="name" maxlength="100" required>
     <label for="home-contact-email">Email</label><input id="home-contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
     <label for="home-contact-message">Message</label><textarea id="home-contact-message" name="message" rows="5" maxlength="5000" required></textarea>
@@ -300,5 +299,30 @@ const panel=document.querySelector(".brand-panel"),visual=document.querySelector
 if(panel&&visual&&matchMedia("(pointer:fine)").matches){visual.addEventListener("pointermove",e=>{const r=visual.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;panel.style.animation="none";panel.style.transform="translate(-50%,-50%) rotateX("+(-y*5)+"deg) rotateY("+(x*7)+"deg)"});visual.addEventListener("pointerleave",()=>{panel.style.animation="panelFloat 7s ease-in-out infinite";panel.style.transform=""})}
 </script>
 <script src="/mobile-nav.js?v=4" defer></script>
+<script>
+document.querySelectorAll('.swarivo-contact-form').forEach(function(form){
+  form.addEventListener('submit',async function(event){
+    event.preventDefault();
+    if(!form.reportValidity()) return;
+    var button=form.querySelector('button[type="submit"],button:not([type])');
+    var original=button?button.textContent:'Send message';
+    var status=form.querySelector('[data-form-status]');
+    if(!status){status=document.createElement('p');status.setAttribute('data-form-status','');status.setAttribute('role','status');status.setAttribute('aria-live','polite');form.appendChild(status);}
+    if(button){button.disabled=true;button.textContent='Sending…';}
+    status.textContent='Sending your message…';
+    try{
+      var response=await fetch('https://formsubmit.co/ajax/business@swarivo.in',{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+      var result=await response.json();
+      if(!response.ok || result.success===false) throw new Error(result.message||'Unable to send your message right now.');
+      status.textContent='Thank you! Your message has been submitted.';
+      form.reset();
+    }catch(error){
+      status.textContent='We could not submit your message. Please try again or email business@swarivo.in directly.';
+    }finally{
+      if(button){button.disabled=false;button.textContent=original;}
+    }
+  });
+});
+</script>
 </body>
 </html>
